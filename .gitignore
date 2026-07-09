@@ -1,0 +1,30 @@
+# 环境变量（含API密钥，绝对不能提交）
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+
+# Node
+node_modules/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.log
+/tmp/
+test_*.json
+test_*.py
+.claude/settings.local.json
