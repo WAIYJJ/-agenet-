@@ -23,14 +23,18 @@ const props = defineProps({
   isLoading: Boolean,
 })
 
-const totalSteps = 4
-
 const completedSteps = computed(() => {
   return props.steps?.filter(s => s.status === 'done').length || 0
 })
 
+const totalSteps = computed(() => {
+  // 动态计算：排除 system 步骤
+  return props.steps?.filter(s => s.agent !== 'system').length || 1
+})
+
 const progress = computed(() => {
-  return Math.min(Math.round((completedSteps.value / totalSteps) * 100), 100)
+  if (totalSteps.value === 0) return 0
+  return Math.min(Math.round((completedSteps.value / totalSteps.value) * 100), 100)
 })
 </script>
 

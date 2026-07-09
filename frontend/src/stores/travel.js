@@ -6,6 +6,7 @@ const STORAGE_KEY = 'travel_sessions'
 const AGENT_NAME_MAP = {
   'coordinator_analyze': 'coordinator', 'coordinator_synthesize': 'coordinator',
   'attraction_agent': 'attraction', 'weather_agent': 'weather', 'hotel_agent': 'hotel',
+  'unsplash_agent': 'unsplash',
 }
 
 function loadSessions() {

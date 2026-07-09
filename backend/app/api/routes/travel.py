@@ -50,7 +50,7 @@ def _fmt(ev: dict) -> str | None:
 
     # node start
     if k == "on_chain_start" and n in ("coordinator_analyze", "coordinator_synthesize",
-                                         "attraction_agent", "weather_agent", "hotel_agent"):
+                                         "attraction_agent", "weather_agent", "hotel_agent", "unsplash_agent"):
         return json.dumps({"event_type": "agent_start", "data": {"agent": n}})
 
     # LLM tokens
